@@ -1,5 +1,7 @@
+import 'package:blood_donation/screens/details_screen.dart';
 import 'package:blood_donation/screens/edit_profile.dart';
 import 'package:blood_donation/screens/home_layer.dart';
+import 'package:blood_donation/screens/home_screen.dart';
 import 'package:blood_donation/screens/login_screen.dart';
 import 'package:blood_donation/screens/register_screen.dart';
 import 'package:flutter/material.dart';

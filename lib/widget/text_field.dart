@@ -5,15 +5,20 @@ class DefaultTextField extends StatelessWidget {
     required this.labelText,
     required this.prefixIcon,
     this.obsecure = false,
+    required this.onChanged,
   });
   final String labelText;
+  late Function onChanged;
   final IconData prefixIcon;
   late bool obsecure;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: TextField(
+      child: TextFormField(
+
+        onChanged: (value){},
+
           obscureText: obsecure,
           cursorColor: const Color.fromARGB(255, 112, 12, 12),
           decoration: InputDecoration(

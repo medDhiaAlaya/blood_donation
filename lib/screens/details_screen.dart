@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailsScreen extends StatefulWidget {
+  static const String screenRoute = 'DetailsScreen';
   const DetailsScreen({Key? key}) : super(key: key);
 
   @override

@@ -1,12 +1,15 @@
+import 'package:blood_donation/screens/SplashScreen.dart';
 import 'package:blood_donation/screens/details_screen.dart';
-import 'package:blood_donation/screens/edit_profile.dart';
 import 'package:blood_donation/screens/home_layer.dart';
 import 'package:blood_donation/screens/home_screen.dart';
 import 'package:blood_donation/screens/login_screen.dart';
+import 'package:blood_donation/screens/profile_screen.dart';
 import 'package:blood_donation/screens/register_screen.dart';
 import 'package:flutter/material.dart';
-
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -22,12 +25,22 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: HomeLayer(),
+      home://HomeLayer(),
+      SplashScreen(),
+      //LoginScreen(),
       routes: {
         LoginScreen.screenRoute: (context) => LoginScreen(),
         RegisterScreen.screenRoute: (context) => RegisterScreen(),
+        HomeScreen.screenRoute: (context) => HomeScreen(),
+        HomeLayer.screenRoute: (context) => HomeLayer(),
+        DetailsScreen.screenRoute: (context) => DetailsScreen(),
+
+
+
+
+
       },
     );
   }
